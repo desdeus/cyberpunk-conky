@@ -1,8 +1,8 @@
 ## Arasaka Cyberdeck HUD - Conky Theme
 An advanced, Cyberpunk 2077 inspired HUD for Linux desktops, optimized for high-resolution displays (2K/4K). This project simulates an Arasaka Cyberdeck interface with dynamic scaling and a fully parametric hardware configuration.
 
-## Preview
-![Preview](ScreenShoot%20Desktop%20Cyberpunk.jpg)
+<img width="2560" height="1440" alt="ScreenShoot Desktop Cyberpunk" src="https://github.com/user-attachments/assets/6bea6c2d-af71-45d5-b056-7b0c2b739c39" />
+
 
 To achieve the overall look of my desktop, I used: 
 * **Theme and Colors**: https://github.com/Roboron3042/Cyberpunk-Neon
@@ -13,6 +13,7 @@ To achieve the overall look of my desktop, I used:
 ## Technical Specifications
 * **Tested Conky Version**: 1.19.6 (compiled 2024-04-01 for Linux x86_64).
 * **Lua Engine**: Lua 5.3 (required for dynamic UI positioning and string parsing).
+* **X.Org version**: 21.1.11
 * **Compatibility**: Fully tested on Linux Mint and Ubuntu.
 
 ## Key Features
@@ -41,8 +42,6 @@ sudo apt update && sudo apt install conky-all lm-sensors neofetch upower lua5.3 
    - lm-sensors
    - neofetch
    - upower
-
-# Optional for full system info display
    - nvidia-smi 
    - fonts-firacode
 
@@ -76,59 +75,59 @@ You must detect your system sensors for temperature monitoring to work:
   
 Example:
   
- `sensors`                                                                                                                                                                                                                                                                                          
-    `it8689-isa-0a40
-    Adapter: ISA adapter
-    in0:           1.16 V  (min =  +0.00 V, max =  +3.06 V)
-    in1:           2.06 V  (min =  +0.00 V, max =  +3.06 V)
-    in2:           2.02 V  (min =  +0.00 V, max =  +3.06 V)
-    in3:           2.05 V  (min =  +0.00 V, max =  +3.06 V)
-    in4:          36.00 mV (min =  +0.00 V, max =  +3.06 V)
-    in5:         768.00 mV (min =  +0.00 V, max =  +3.06 V)
-    in6:         672.00 mV (min =  +0.00 V, max =  +3.06 V)
-    3VSB:          3.34 V  (min =  +0.00 V, max =  +6.12 V)
-    Vbat:          3.10 V  
-    fan1:        1171 RPM  (min =    0 RPM)
-    fan2:         553 RPM  (min =    0 RPM)
-    fan3:           0 RPM  (min =    0 RPM)
-    fan4:           0 RPM  (min =    0 RPM)
-    fan5:        2596 RPM  (min =    0 RPM)
-    fan6:         620 RPM  (min =    0 RPM)
-    temp1:        +29.0°C  (low  = +127.0°C, high = +127.0°C)
-    temp2:        +38.0°C  (low  = +127.0°C, high = +127.0°C)
-    temp3:        +34.0°C  (low  = +127.0°C, high = +127.0°C)
-    temp4:        +34.0°C  (low  = +127.0°C, high = +127.0°C)
-    temp5:        +35.0°C  (low  =  +0.0°C, high = -124.0°C) 
-    temp6:        +37.0°C  (low  = +127.0°C, high = +127.0°C)
+                                                                                                                                                                                                                   `sensors`                               
+    `it8689-isa-0a40`
+    `Adapter: ISA adapter`
+    `in0:           1.16 V  (min =  +0.00 V, max =  +3.06 V)`
+    `in1:           2.06 V  (min =  +0.00 V, max =  +3.06 V)`
+    `in2:           2.02 V  (min =  +0.00 V, max =  +3.06 V)`
+    `in3:           2.05 V  (min =  +0.00 V, max =  +3.06 V)`
+    `in4:          36.00 mV (min =  +0.00 V, max =  +3.06 V)`
+    `in5:         768.00 mV (min =  +0.00 V, max =  +3.06 V)`
+    `in6:         672.00 mV (min =  +0.00 V, max =  +3.06 V)`
+    `3VSB:          3.34 V  (min =  +0.00 V, max =  +6.12 V)`
+    `Vbat:          3.10 V  `
+    `fan1:        1171 RPM  (min =    0 RPM)`
+    `fan2:         553 RPM  (min =    0 RPM)`
+    `fan3:           0 RPM  (min =    0 RPM)`
+    `fan4:           0 RPM  (min =    0 RPM)`
+    `fan5:        2596 RPM  (min =    0 RPM)`
+    `fan6:         620 RPM  (min =    0 RPM)`
+    `temp1:        +29.0°C  (low  = +127.0°C, high = +127.0°C)`
+    `temp2:        +38.0°C  (low  = +127.0°C, high = +127.0°C)`
+    `temp3:        +34.0°C  (low  = +127.0°C, high = +127.0°C)`
+    `temp4:        +34.0°C  (low  = +127.0°C, high = +127.0°C)`
+    `temp5:        +35.0°C  (low  =  +0.0°C, high = -124.0°C) `
+    `temp6:        +37.0°C  (low  = +127.0°C, high = +127.0°C)`
 
 
-    coretemp-isa-0000
-    Adapter: ISA adapter
-    Package id 0:  +34.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 0:        +30.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 4:        +30.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 8:        +30.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 12:       +32.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 16:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 20:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 24:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 28:       +30.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 32:       +34.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 33:       +34.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 34:       +34.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 35:       +34.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 36:       +32.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 37:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 38:       +32.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 39:       +32.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 40:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 41:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 42:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 43:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 44:       +30.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 45:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 46:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
-    Core 47:       +31.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `coretemp-isa-0000`
+    `Adapter: ISA adapter`
+    `Package id 0:  +34.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 0:        +30.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 4:        +30.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 8:        +30.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 12:       +32.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 16:       +31.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 20:       +31.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 24:       +33.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 28:       +30.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 32:       +34.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 33:       +34.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 34:       +34.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 35:       +34.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 36:       +32.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 37:       +31.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 38:       +32.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 39:       +32.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 40:       +33.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 41:       +33.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 42:       +33.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 43:       +33.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 44:       +30.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 45:       +31.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 46:       +31.0°C  (high = +80.0°C, crit = +100.0°C)`
+    `Core 47:       +31.0°C  (high = +80.0°C, crit = +100.0°C)`
     
 For CPU Temperature Template 4, the String will be `coretemp-isa-0000|Package id 0`
 For MD Temperature Template 5, the String will be `it8689-isa-0a40|temp1`
@@ -302,19 +301,22 @@ Personalizations are handled via the template system in cyberpunk-conky.conf:
 | Template 1 | Primary UI Font        | Fira Code                                    |
 | Template 2 | Network Interface      | wlo1 or eth0                                 |
 | Template 3 | Timezone               | Europe/Rome                                  |
-| Template 4 | CPU Sensor (Chip Label)| coretemp-isa-0000|Package id 0               |
-| Template 5 | Sys Sensor (Chip Label)| it8689-isa-0a40|temp1                        |
+| Template 4 | CPU Sensor (Chip Label)| coretemp-isa-0000&#124Package id 0           |
+| Template 5 | Sys Sensor (Chip Label)| it8689-isa-0a40&#124temp1"                   |
 | Template 6 | GPU Monitoring Command | nvidia-smi --query-gpu=...                   |
-| Template 7 | Power/Battery Path     | /org/freedesktop/UPower/devices/battery_BAT0 | 
+| Template 7 | Power/Battery Path     | upower -i /org/freedesktop/UPower/devic...   | 
 
 Note: The Lua engine is designed to handle standard shell syntax. You do not need to use special escaping for awk or grep commands in the config file.
 
 
 ## Acknowledgments & Inspiration
-Cyberpunk 2077: For the iconic Arasaka Corporation aesthetic.
-
-Community Contributors: Special thanks to the developers and artists whose original ASCII designs and layouts inspired this version.
-
+   - Thanks to CD Projekt for a magnificent game.
+   - Thanks to Mike Pondsmith and R. Talsorian Games for giving us this magnificent universe.
+   - Thanks to u/S_S_R_I. [Conky inspired by Cyberpunk 2077 hack screen](https://www.reddit.com/r/unixporn/comments/1pi7bd7/conky_inspired_by_cyberpunk_2077_hack_screen/) for inspiring me,
+   - Thanks to Community Contributors to the developers and artists whose original ASCII designs and layouts inspired this version.
+   - Thanks to [ascii-image-converter](https://github.com/TheZoraiz/ascii-image-converter) for allowing me to convert the Arasaka logo into ASCII Art
+![Arasaka_2077](https://github.com/user-attachments/assets/4b1f2b74-9b2b-4a65-b20c-71b6ac40efa1)
+   
 ## License
 MIT License - Feel free to modify and share your own version of the Arasaka Cyberdeck!
 
