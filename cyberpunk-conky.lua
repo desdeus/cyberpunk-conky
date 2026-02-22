@@ -79,7 +79,7 @@ function conky_draw_main()
     local ram_x = get_x(37.1) 
     local box_width = 46 
     
-    out = out .. "${voffset " .. get_y(5.5) .. "}${goto " .. ram_x .. "}${color 00FFFF}${font " .. font_main .. ":size=15}╔════════════════CYBERDECK RAM═════════════════╗"
+    out = out .. "${voffset " .. get_y(2.5) .. "}${goto " .. ram_x .. "}${color 00FFFF}${font " .. font_main .. ":size=15}╔════════════════CYBERDECK RAM═════════════════╗"
     
     local mem_info = string.format("%s / %s [%d%%]", mem_u_val, mem_max_val, mem_p_val)
     local info_padding = math.floor((box_width - #mem_info) / 2)
@@ -148,7 +148,7 @@ ${goto ]] .. logo_x_left .. [[}     .:::::::::::::::::. ::::::::   .......    .:
 ${goto ]] .. logo_x_left .. [[}        .:::::::::::::::.::::::::                 .:::::::::::::.             ..::::::::::::::..:::::::.     .:::::::::::::::::::::::::::::          ..::::::::::::::.::::::::                  .:::::::::::::.    .::::::::::::::..:::::::. 
 ${goto ]] .. logo_x_left .. [[}              .....      ........                    .............                  ......      .......        ...........................                 .....      ........                     ............         ......      .......  
 ]]
-    out = out .. arasaka_logo .. "\n${goto " .. get_x(46.1) .. "}${font " .. font_main .. ":size=15}Mk.2-0 SHADOW"
+    out = out .. arasaka_logo .. "\n${goto " .. get_x(46.1) .. "}${font " .. font_main .. ":size=15}Mk.1-0 KAGE "
 
     -- --- 4. SYSTEM INFO & DAEMONS (RIGHT ALIGNED) ---
     local right_col_x = get_x(78.1) 
