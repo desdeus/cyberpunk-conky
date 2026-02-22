@@ -275,7 +275,7 @@ Clone or download this repository into your local directory:
   
 2. Clone this repository:
 
-    `git clone https://github.com/desdeus/cyberpunk-conky.git ~/.conky --depth 1`
+    `git clone https://github.com/desdeus/cyberpunk-conky.git ~/.conky/cyberpunk-conky --depth 1`
    
     + Note: if you downlad file move folder `cyberpunk-conky` into your new `~/.conky` directory
     
@@ -289,6 +289,8 @@ Clone or download this repository into your local directory:
 4. Now conky can be started by issuing the command:
     
       `./start-cyberpunk-conky.sh`
+
+    Note: The command takes 10 seconds to run. It's set to auto-start, so the desktop has time to load properly.  
 
 7. Autorun at start:
    - Commands can be run at login by placing a launcher in the `~/.config/autostart` or by adding an entry to your 'Startup Applications' gui
