@@ -5,22 +5,22 @@ An advanced, Cyberpunk 2077 inspired HUD for Linux desktops, optimized for high-
 ![Preview](ScreenShoot%20Desktop%20Cyberpunk.jpg)
 
 To achieve the overall look of my desktop, I used: 
-* [cite_start]**Theme and Colors**: https://github.com/Roboron3042/Cyberpunk-Neon
-* [cite_start]**Cursors**: https://github.com/clayrisser/breeze-hacked-cursor-theme
-* [cite_start]**Icons**: https://github.com/dreifacherspass/cyberpunk-technotronic-icon-theme
-* [cite_start]**Wallpaper**: https://hdqwalls.com/wallpaper/2560x1440/cyberpunk-2077-minimal-dark-4k
+* **Theme and Colors**: https://github.com/Roboron3042/Cyberpunk-Neon
+* **Cursors**: https://github.com/clayrisser/breeze-hacked-cursor-theme
+* **Icons**: https://github.com/dreifacherspass/cyberpunk-technotronic-icon-theme
+* **Wallpaper**: https://hdqwalls.com/wallpaper/2560x1440/cyberpunk-2077-minimal-dark-4k
 
 ## Technical Specifications
-* [cite_start]**Tested Conky Version**: 1.19.6 (compiled 2024-04-01 for Linux x86_64).
-* [cite_start]**Lua Engine**: Lua 5.3 (required for dynamic UI positioning and string parsing).
-* [cite_start]**Compatibility**: Fully tested on Linux Mint and Ubuntu.
+* **Tested Conky Version**: 1.19.6 (compiled 2024-04-01 for Linux x86_64).
+* **Lua Engine**: Lua 5.3 (required for dynamic UI positioning and string parsing).
+* **Compatibility**: Fully tested on Linux Mint and Ubuntu.
 
 ## Key Features
-* [cite_start]**Dynamic Resolution Scaling**: Uses percentage-based logic to automatically position elements regardless of your exact screen resolution.
-* [cite_start]**Parametric Configuration**: Change your hardware sensors, network interface, and timezone directly in the .conf file without touching the Lua logic.
-* [cite_start]**Real-time Diagnostics**: Monitoring for CPU/System temperatures, GPU load, Disk I/O, and Network traffic.
-* [cite_start]**Arasaka Visual Identity**: High-fidelity ASCII logo and custom-styled data boxes.
-* [cite_start]**UTF-8 Precision Padding**: Custom Lua logic to ensure pixel-perfect box alignment, handling multi-byte characters like `°C` without breaking the borders.
+* **Dynamic Resolution Scaling**: Uses percentage-based logic to automatically position elements regardless of your exact screen resolution.
+* **Parametric Configuration**: Change your hardware sensors, network interface, and timezone directly in the .conf file without touching the Lua logic.
+* **Real-time Diagnostics**: Monitoring for CPU/System temperatures, GPU load, Disk I/O, and Network traffic.
+* **Arasaka Visual Identity**: High-fidelity ASCII logo and custom-styled data boxes.
+* **UTF-8 Precision Padding**: Custom Lua logic to ensure pixel-perfect box alignment, handling multi-byte characters like `°C` without breaking the borders.
 
 
 ## Inspiration
@@ -77,58 +77,58 @@ You must detect your system sensors for temperature monitoring to work:
 Example:
   
  `sensors`                                                                                                                                                                                                                                                                                          
-  it8689-isa-0a40
-  Adapter: ISA adapter
-  in0:           1.16 V  (min =  +0.00 V, max =  +3.06 V)
-  in1:           2.06 V  (min =  +0.00 V, max =  +3.06 V)
-  in2:           2.02 V  (min =  +0.00 V, max =  +3.06 V)
-  in3:           2.05 V  (min =  +0.00 V, max =  +3.06 V)
-  in4:          36.00 mV (min =  +0.00 V, max =  +3.06 V)
-  in5:         768.00 mV (min =  +0.00 V, max =  +3.06 V)
-  in6:         672.00 mV (min =  +0.00 V, max =  +3.06 V)
-  3VSB:          3.34 V  (min =  +0.00 V, max =  +6.12 V)
-  Vbat:          3.10 V  
-  fan1:        1171 RPM  (min =    0 RPM)
-  fan2:         553 RPM  (min =    0 RPM)
-  fan3:           0 RPM  (min =    0 RPM)
-  fan4:           0 RPM  (min =    0 RPM)
-  fan5:        2596 RPM  (min =    0 RPM)
-  fan6:         620 RPM  (min =    0 RPM)
-  temp1:        +29.0°C  (low  = +127.0°C, high = +127.0°C)
-  temp2:        +38.0°C  (low  = +127.0°C, high = +127.0°C)
-  temp3:        +34.0°C  (low  = +127.0°C, high = +127.0°C)
-  temp4:        +34.0°C  (low  = +127.0°C, high = +127.0°C)
-  temp5:        +35.0°C  (low  =  +0.0°C, high = -124.0°C) 
-  temp6:        +37.0°C  (low  = +127.0°C, high = +127.0°C)
+    `it8689-isa-0a40
+    Adapter: ISA adapter
+    in0:           1.16 V  (min =  +0.00 V, max =  +3.06 V)
+    in1:           2.06 V  (min =  +0.00 V, max =  +3.06 V)
+    in2:           2.02 V  (min =  +0.00 V, max =  +3.06 V)
+    in3:           2.05 V  (min =  +0.00 V, max =  +3.06 V)
+    in4:          36.00 mV (min =  +0.00 V, max =  +3.06 V)
+    in5:         768.00 mV (min =  +0.00 V, max =  +3.06 V)
+    in6:         672.00 mV (min =  +0.00 V, max =  +3.06 V)
+    3VSB:          3.34 V  (min =  +0.00 V, max =  +6.12 V)
+    Vbat:          3.10 V  
+    fan1:        1171 RPM  (min =    0 RPM)
+    fan2:         553 RPM  (min =    0 RPM)
+    fan3:           0 RPM  (min =    0 RPM)
+    fan4:           0 RPM  (min =    0 RPM)
+    fan5:        2596 RPM  (min =    0 RPM)
+    fan6:         620 RPM  (min =    0 RPM)
+    temp1:        +29.0°C  (low  = +127.0°C, high = +127.0°C)
+    temp2:        +38.0°C  (low  = +127.0°C, high = +127.0°C)
+    temp3:        +34.0°C  (low  = +127.0°C, high = +127.0°C)
+    temp4:        +34.0°C  (low  = +127.0°C, high = +127.0°C)
+    temp5:        +35.0°C  (low  =  +0.0°C, high = -124.0°C) 
+    temp6:        +37.0°C  (low  = +127.0°C, high = +127.0°C)
 
 
-  coretemp-isa-0000
-  Adapter: ISA adapter
-  Package id 0:  +34.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 0:        +30.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 4:        +30.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 8:        +30.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 12:       +32.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 16:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 20:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 24:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 28:       +30.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 32:       +34.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 33:       +34.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 34:       +34.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 35:       +34.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 36:       +32.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 37:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 38:       +32.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 39:       +32.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 40:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 41:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 42:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 43:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 44:       +30.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 45:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 46:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
-  Core 47:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
+    coretemp-isa-0000
+    Adapter: ISA adapter
+    Package id 0:  +34.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 0:        +30.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 4:        +30.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 8:        +30.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 12:       +32.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 16:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 20:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 24:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 28:       +30.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 32:       +34.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 33:       +34.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 34:       +34.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 35:       +34.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 36:       +32.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 37:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 38:       +32.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 39:       +32.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 40:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 41:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 42:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 43:       +33.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 44:       +30.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 45:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 46:       +31.0°C  (high = +80.0°C, crit = +100.0°C)
+    Core 47:       +31.0°C  (high = +80.0°C, crit = +100.0°C)`
     
 For CPU Temperature Template 4, the String will be `coretemp-isa-0000|Package id 0`
 For MD Temperature Template 5, the String will be `it8689-isa-0a40|temp1`
@@ -203,30 +203,30 @@ To identify the network interface for the Template 2 the command is:
 
 The result is list of Network inteface. If it starts with `e` it is usually an ethernet port; if it starts with `w` it is wireless. `lo' is the loopback ignore it.
 
-enp5s0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
-        ether 74:56:3c:b3:a1:67  txqueuelen 1000  (Ethernet)
-        RX packets 0  bytes 0 (0.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+    `enp5s0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+            ether 74:56:3c:b3:a1:67  txqueuelen 1000  (Ethernet)
+            RX packets 0  bytes 0 (0.0 B)
+            RX errors 0  dropped 0  overruns 0  frame 0
+            TX packets 0  bytes 0 (0.0 B)
+            TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-        loop  txqueuelen 1000  (Loopback locale)
-        RX packets 48988  bytes 4788329 (4.7 MB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 48988  bytes 4788329 (4.7 MB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+    lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+            inet 127.0.0.1  netmask 255.0.0.0
+            inet6 ::1  prefixlen 128  scopeid 0x10<host>
+            loop  txqueuelen 1000  (Loopback locale)
+            RX packets 48988  bytes 4788329 (4.7 MB)
+            RX errors 0  dropped 0  overruns 0  frame 0
+            TX packets 48988  bytes 4788329 (4.7 MB)
+            TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.68.51  netmask 255.255.252.0  broadcast 192.168.71.255
-        inet6 fe80::7fc2:9723:d8bc:ef7c  prefixlen 64  scopeid 0x20<link>
-        ether ac:19:8e:9e:41:43  txqueuelen 1000  (Ethernet)
-        RX packets 434371  bytes 391709688 (391.7 MB)
-        RX errors 0  dropped 150  overruns 0  frame 0
-        TX packets 190042  bytes 61321786 (61.3 MB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+    wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+            inet 192.168.68.51  netmask 255.255.252.0  broadcast 192.168.71.255
+            inet6 fe80::7fc2:9723:d8bc:ef7c  prefixlen 64  scopeid 0x20<link>
+            ether ac:19:8e:9e:41:43  txqueuelen 1000  (Ethernet)
+            RX packets 434371  bytes 391709688 (391.7 MB)
+            RX errors 0  dropped 150  overruns 0  frame 0
+            TX packets 190042  bytes 61321786 (61.3 MB)
+            TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0`
 
 For Network Inteface Template 2, the String will be `wlo1` or `enp5s0`
 
@@ -268,13 +268,13 @@ Clone or download this repository into your local directory:
 1. Need set all of our conky files into a folder called `.conky` (The period indicates that this is a hidden file). 
     + If don't exisit Create a directory in your home folder 
 
-      `cd && sudo mkdir ~/.conky`
+      `sudo mkdir ~/.conky`
     
     - Note: [CTRL + h] toggles hidden files from view
   
 2. Clone this repository:
 
-    `git clone https://github.com/SandSux/cyberpunk-conky.git ~/.conky --depth 1`
+    `git clone https://github.com/desdeus/cyberpunk-conky.git ~/.conky --depth 1`
    
     + Note: if you downlad file move folder `cyberpunk-conky` into your new `~/.conky` directory
     
