@@ -181,7 +181,7 @@ Check intel_gpu_top Sensors
 3. Run intel_gpu_top -s 1 | grep "Render/3D" | awk '{print $2}' | cut -d'%' -f1 
 4. Check if the value is equal at previous Load
 
-Note: For AMD/Intel, They are untested. The point 3 is a key for Template 6
+Note: For AMD/Intel They are untested. The point 3 is a key for Template 6
 
 
 **Install neofetch**
@@ -193,6 +193,8 @@ Install neofetch for info on for battery info :
 Verify neofetch
 1. Run neofetch
 2. Check you device information
+
+Note: Neofetch's information refresh interval is fixed at 60 seconds
 
 **Network Interface** 
 
@@ -233,15 +235,15 @@ For Network Inteface Template 2, the String will be `wlo1` or `enp5s0`
 
 To identify the time zone for the Template 3 the command is:
 
-`timedatectl` 
-The result is Time info including the Time Zone.
-               Local time: dom 2026-02-22 19:10:11 CET
-           Universal time: dom 2026-02-22 18:10:11 UTC
-                 RTC time: dom 2026-02-22 18:10:11
-                Time zone: Europe/Rome (CET, +0100)
-System clock synchronized: yes
-              NTP service: active
-          RTC in local TZ: no
+      `timedatectl` 
+         `The result is Time info including the Time Zone.`
+                        `Local time: dom 2026-02-22 19:10:11 CET`
+                    `Universal time: dom 2026-02-22 18:10:11 UTC`
+                          `RTC time: dom 2026-02-22 18:10:11`
+                         `Time zone: Europe/Rome (CET, +0100)`
+         `System clock synchronized: yes`
+                       `NTP service: active`
+                   `RTC in local TZ: no`
 
 For Network Inteface Template 3, the String will be `Europe/Rome`
 
@@ -261,7 +263,7 @@ Installation on Ubuntu/Mint:
 Note: If you change the font in Template 1, ensure the name matches exactly the one installed on your system (use fc-list to check).
 
 
-## setup the Project
+## Setup the Project
 Clone or download this repository into your local directory:
 
 1. Need set all of our conky files into a folder called `.conky` (The period indicates that this is a hidden file). 
@@ -296,6 +298,28 @@ Clone or download this repository into your local directory:
 
 Personalizations are handled via the template system in cyberpunk-conky.conf:
 
+**Adjusting for Your Screen Resolution**
+
+
+The HUD is designed with dynamic scaling, but it needs to know your actual screen resolution to calculate positions correctly. If your resolution is not 2560x1440, follow these steps:
+
+1. Open cyberpunk-conky.conf.
+2. Locate the Window Settings section at the top.
+3. Update the following values to match your monitor's resolution:
+4. minimum_width: Set this to your screen width (e.g., 1920).
+5. minimum_height: Set this to your screen height (e.g., 1080).
+
+         -- Example for 1080p resolution:
+         alignment = 'top_left',
+         minimum_width = 1920,
+         minimum_height = 1080,
+
+Note: The Lua engine will automatically recalculate all element positions (Gotos and Voffsets) based on these two values.
+
+**Template Variabile**
+
+These variables allow you to configure Lua to use the data of the user for customizing the various fields
+
 | Template   | Description            | Example Value                                |
 |------------|------------------------|----------------------------------------------|
 | Template 1 | Primary UI Font        | Fira Code                                    |
@@ -303,8 +327,8 @@ Personalizations are handled via the template system in cyberpunk-conky.conf:
 | Template 3 | Timezone               | Europe/Rome                                  |
 | Template 4 | CPU Sensor (Chip Label)| coretemp-isa-0000&#124Package id 0           |
 | Template 5 | Sys Sensor (Chip Label)| it8689-isa-0a40&#124temp1"                   |
-| Template 6 | GPU Monitoring Command | nvidia-smi --query-gpu=...                   |
-| Template 7 | Power/Battery Path     | upower -i /org/freedesktop/UPower/devic...   | 
+| Template 6 | GPU Monitoring         | nvidia-smi --query-gpu=...                   |
+| Template 7 | Power/Battery          | upower -i /org/freedesktop/UPower/devic...   | 
 
 Note: The Lua engine is designed to handle standard shell syntax. You do not need to use special escaping for awk or grep commands in the config file.
 
@@ -319,5 +343,7 @@ Note: The Lua engine is designed to handle standard shell syntax. You do not nee
    
 ## License
 MIT License - Feel free to modify and share your own version of the Arasaka Cyberdeck!
+
+Note on Contributions: This is a personal project. While you are encouraged to fork and adapt it for your own use, I am currently not accepting Pull Requests or external contributions to the main repository.
 
 
