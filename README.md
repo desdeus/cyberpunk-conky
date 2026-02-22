@@ -1,7 +1,7 @@
 ## Arasaka Cyberdeck HUD - Conky Theme
 An advanced, Cyberpunk 2077 inspired HUD for Linux desktops, optimized for high-resolution displays (2K/4K). This project simulates an Arasaka Cyberdeck interface with dynamic scaling and a fully parametric hardware configuration.
 
-<img width="2560" height="1440" alt="ScreenShoot Desktop Cyberpunk" src="https://github.com/user-attachments/assets/6bea6c2d-af71-45d5-b056-7b0c2b739c39" />
+<img width="2560" height="1440" alt="ScreenShoot Desktop Cyberpunk" src="https://github.com/desdeus/cyberpunk-conky/blob/main/ScreenShoot%20Desktop%20Cyberpunk.png" />
 
 
 To achieve the overall look of my desktop, I used: 
@@ -339,7 +339,7 @@ Note: The Lua engine is designed to handle standard shell syntax. You do not nee
    - Thanks to u/S_S_R_I. [Conky inspired by Cyberpunk 2077 hack screen](https://www.reddit.com/r/unixporn/comments/1pi7bd7/conky_inspired_by_cyberpunk_2077_hack_screen/) for inspiring me,
    - Thanks to Community Contributors to the developers and artists whose original ASCII designs and layouts inspired this version.
    - Thanks to [ascii-image-converter](https://github.com/TheZoraiz/ascii-image-converter) for allowing me to convert the Arasaka logo into ASCII Art
-![Arasaka_2077](https://github.com/user-attachments/assets/4b1f2b74-9b2b-4a65-b20c-71b6ac40efa1)
+![Arasaka_2077](https://github.com/desdeus/cyberpunk-conky/blob/main/Arasaka_2077.webp)
    
 ## License
 MIT License - Feel free to modify and share your own version of the Arasaka Cyberdeck!
